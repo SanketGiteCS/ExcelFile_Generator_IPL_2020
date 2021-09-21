@@ -1,0 +1,12 @@
+const request = require("request");
+const cheerio = require("cheerio");
+const chalk = require('chalk');
+const fs = require("fs");
+const ExcelJS = require('exceljs');
+const workbook = new ExcelJS.Workbook();
+workbook.creator = 'Me';
+workbook.lastModifiedBy = 'Her';
+workbook.created = new Date(1985, 8, 30);
+workbook.modified = new Date();
+workbook.lastPrinted = new Date(2016, 9, 27);
+const sheet = workbook.addWorksheet('My Sheet');
